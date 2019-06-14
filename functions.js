@@ -10,3 +10,15 @@ function addNote(){
 	document.querySelector("#" + newNote.id + " .noteTitle").required = true
 	document.querySelector("#" + newNote.id + " .noteBody" ).required = true
 }
+
+function deleteNote(element){
+
+}
+
+function saveNotepad(){
+
+}
+
+function deleteNotepad(){
+	document.getElementById("notepadForm").reset()
+}
