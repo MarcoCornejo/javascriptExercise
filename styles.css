@@ -29,3 +29,11 @@ body{
 .myNotes{
 	margin-top: 50px;
 }
+
+input, textarea{
+	padding: .375rem .75rem;
+	border: 1px solid #CCC;
+	border-radius: .25rem;
+	font-family: Arial;
+	color: #333;
+}
