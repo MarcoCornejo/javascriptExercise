@@ -28,19 +28,19 @@ function saveNotepad(){
 	var content = {};
 	var data = {};
 	var notes = document.querySelectorAll(".notes .myNotes")
-	var firstNote = notes[0]
-	content["content"] = firstNote.querySelector(".noteBody").value
-	file[firstNote.querySelector(".noteTitle").value + ".txt"] = content
-	data["files"] = file
-	var response = postRequest("https://api.github.com/gists", data)
-	console.log(response)
+	notes.forEach(function(note, index){
+		content["content"] = note.querySelector(".noteBody").value
+		file[note.querySelector(".noteTitle").value + ".txt"] = content
+		data["files"] = file
+		postRequest("https://api.github.com/gists", data, note.id)
+	});
 }
 
 function deleteNotepad(){
 	document.getElementById("notepadForm").reset()
 }
 
-function postRequest(url, data){
+function postRequest(url, data, noteId){
 	return fetch(url, {
 		method: 'POST',
 		body: JSON.stringify(data),
@@ -50,4 +50,11 @@ function postRequest(url, data){
 		}),
 	})
 	.then(response => response.json())
+	.then(data => {
+		var noteElement = document.querySelector("#note1")
+		noteElement.name = data.url
+		if(noteElement.classList.contains("new"))
+			noteElement.classList.remove("new")
+	})
+	.catch(error => console.error(error))
 }
