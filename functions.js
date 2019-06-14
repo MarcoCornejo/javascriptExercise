@@ -24,7 +24,16 @@ function deleteNote(element){
 }
 
 function saveNotepad(){
-	
+	var file = {};
+	var content = {};
+	var data = {};
+	var notes = document.querySelectorAll(".notes .myNotes")
+	var firstNote = notes[0]
+	content["content"] = firstNote.querySelector(".noteBody").value
+	file[firstNote.querySelector(".noteTitle").value + ".txt"] = content
+	data["files"] = file
+	var response = postRequest("https://api.github.com/gists", data)
+	console.log(response)
 }
 
 function deleteNotepad(){
@@ -37,7 +46,7 @@ function postRequest(url, data){
 		body: JSON.stringify(data),
 		headers: new Headers({
 			'Content-Type': 'application/json',
-			'Authorization': 'token 8dc693ff94b1a1fa893950f3c86a4667fc30a069'
+			'Authorization': 'token 39035ef83dc9e9140ed67c7b52b7beb28557dd92'
 		}),
 	})
 	.then(response => response.json())
