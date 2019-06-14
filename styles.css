@@ -74,3 +74,7 @@ button{
 	background-color: #57B93E;
 	margin-top: 15px;
 }
+
+.myNotes label{
+	font-size: 18px;
+}
