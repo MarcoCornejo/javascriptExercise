@@ -12,7 +12,11 @@ function addNote(){
 	}else{
 		newNote.id = "note1"
 	}
+	newNote.querySelector(".noteTitle").value = document.querySelector(".noteTitle").value
+	newNote.querySelector(".noteBody").value = document.querySelector(".noteBody").value
 	notes.appendChild(newNote)
+	document.querySelector(".noteTitle").value = ""
+	document.querySelector(".noteBody").value = ""
 	document.querySelector("#" + newNote.id + " .delete").id = newNote.id
 	document.querySelector("#" + newNote.id + " .noteTitle").required = true
 	document.querySelector("#" + newNote.id + " .noteBody" ).required = true
