@@ -55,6 +55,11 @@ function saveNotepad(){
 }
 
 function deleteNotepad(){
+	var notes = document.querySelectorAll(".notes .myNotes")
+	notes.forEach(function(note){
+		deleteNote(note)
+	});
+	saveNotepad();
 	document.getElementById("notepadForm").reset()
 }
 
