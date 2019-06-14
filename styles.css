@@ -82,3 +82,8 @@ button{
 .myNotes label{
 	font-size: 18px;
 }
+
+.noteTemplate{
+	display: none;
+	margin-bottom: 25px;
+}
