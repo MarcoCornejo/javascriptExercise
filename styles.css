@@ -37,3 +37,13 @@ input, textarea{
 	font-family: Arial;
 	color: #333;
 }
+
+.noteTitle{
+	width: 50%;
+	margin-top: 5px;
+}
+
+.noteBody{
+	width: 50%;
+	resize: none;
+}
