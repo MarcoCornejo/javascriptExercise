@@ -64,3 +64,8 @@ button{
 .saveNotepad{
 	background-color: #39ACDC;
 }
+
+.delete{
+	background-color: #EC3646;
+	margin-left: 10px;
+}
