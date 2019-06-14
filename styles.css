@@ -47,3 +47,7 @@ input, textarea{
 	width: 50%;
 	resize: none;
 }
+
+.container-noteBody{
+	margin-top: 5px;
+}
