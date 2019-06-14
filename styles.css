@@ -75,6 +75,10 @@ button{
 	margin-top: 15px;
 }
 
+.container-notepad label{
+	font-size: 12px;
+}
+
 .myNotes label{
 	font-size: 18px;
 }
