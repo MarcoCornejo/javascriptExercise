@@ -51,3 +51,12 @@ input, textarea{
 .container-noteBody{
 	margin-top: 5px;
 }
+
+button{
+	border-radius: .25rem;
+	padding: .58rem 1.5rem;
+	border: 1px solid transparent;
+	cursor: pointer;
+	color: white;
+	font-size: 14px;
+}
