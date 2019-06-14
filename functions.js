@@ -12,7 +12,10 @@ function addNote(){
 }
 
 function deleteNote(element){
-
+	var idNumber = element.id.match(/\d/g).join("")
+	var notes = document.querySelector(".notes")
+	var noteToDelete = document.querySelector("#" + element.id)
+	notes.removeChild(noteToDelete)
 }
 
 function saveNotepad(){
