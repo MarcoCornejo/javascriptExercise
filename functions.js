@@ -24,9 +24,21 @@ function deleteNote(element){
 }
 
 function saveNotepad(){
-
+	
 }
 
 function deleteNotepad(){
 	document.getElementById("notepadForm").reset()
+}
+
+function postRequest(url, data){
+	return fetch(url, {
+		method: 'POST',
+		body: JSON.stringify(data),
+		headers: new Headers({
+			'Content-Type': 'application/json',
+			'Authorization': 'token 8dc693ff94b1a1fa893950f3c86a4667fc30a069'
+		}),
+	})
+	.then(response => response.json())
 }
