@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Notepad Application</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div class="container-main">
+			<label class="pageTitle">Notepad Application</label>
+			<div class="container-notepad">
+				<form id="notepadForm">
+					<div>
+						<div>
+							<label>Notepad Title</label>
+							<div>
+								<input type="text" class="notepadTitle" placeholder="My notepad title..." maxlength="255" required="true">
+							</div>
+						</div>
+						<div class="form-actions">
+							<button type="button" class="saveNotepad" onclick="saveNotepad();">Save</button>
+							<button type="button" class="delete" onclick="deleteNotepad();">Delete</button>
+						</div>
+					</div>
+					<div class="myNotes">
+						<div>
+							<label>My Notes</label>
+							<div>
+								<input type="text" class="noteTitle" placeholder="Enter note title..." maxlength="255" required="true">
+							</div>
+						</div>
+						<div class="container-noteBody">
+							<textarea rows="4" class="noteBody" placeholder="Enter note..." maxlength="1000" required="true"></textarea>
+						</div>
+						<button type="button" class="add" onclick="addNote();">Add</button>
+					</div>
+					<div class="notes">
+						<div class="noteTemplate">
+							<div>
+								<input type="text" class="noteTitle" maxlength="255">
+								<button type="button" class="delete" onclick="deleteNote(this);">Delete</button>
+							</div>
+							<div class="container-noteBody">
+								<textarea rows="4" class="noteBody" maxlength="1000"></textarea>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	<script type="text/javascript" src="functions.js"></script>
+	</body>
+</html>
