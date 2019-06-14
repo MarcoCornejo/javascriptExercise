@@ -15,3 +15,17 @@ body{
 	min-height: 75vh;
 	margin-top: 15px;
 }
+
+.form-actions{
+	float: right;
+}
+
+.notepadTitle{
+	float: left;
+	width: 27%;
+	margin-top: 5px;
+}
+
+.myNotes{
+	margin-top: 50px;
+}
