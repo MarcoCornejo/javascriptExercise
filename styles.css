@@ -87,3 +87,29 @@ button{
 	display: none;
 	margin-bottom: 25px;
 }
+
+@media only screen and (min-width:320px) and (max-width:1024px) {
+  /* For mobile phones: */
+  .container-main, .myNotes, .noteBody,
+  .noteTitle, .notepadTitle, .noteTemplate {
+    width:100%;
+  }
+
+  .container-main{
+  	margin: 1vw;
+  }
+
+  .form-actions{
+  	float: none;
+  }
+
+  .notepadTitle{
+  	float: none;
+  	margin-bottom: 10px;
+  }
+
+  .noteTemplate{
+  	display: none;
+  	margin-bottom: 25px;
+  }
+}
